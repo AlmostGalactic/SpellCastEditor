@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpellCast Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Monaco Editor Loader -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.44.0/min/vs/loader.js"></script>
+</head>
+<body>
+    <h1>SpellCast Editor</h1>
+    <div class="container">
+        <div id="editor"></div>
+        <div class="controls">
+            <button id="run-button">Cast Spell</button>
+            <div id="output-container">
+                <h2>Output Cauldron</h2>
+                <pre id="output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "./spellcast.js": "./spellcast.js",
+            "./lexer.js": "./lexer.js",
+            "./parser.js": "./parser.js",
+            "./environment.js": "./environment.js",
+            "./interpreter.js": "./interpreter.js",
+            "./script.js": "./script.js"
+        }
+    }
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
