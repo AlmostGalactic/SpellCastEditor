@@ -41,7 +41,7 @@ class Interpreter {
 
             case "PRINT":
                 const printValue = this.evaluate(node.value, env);
-                this.outputFn(printValue); // Use the provided output function
+                process.stdout.write(printValue); // Use the provided output function
                 return null;
 
             case "ADD":
