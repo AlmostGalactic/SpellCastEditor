@@ -158,7 +158,7 @@ require(['vs/editor/editor.main'], function() {
         let interpreter;
 
         try {
-            appendOutput('Casting spell...', 'info');
+            appendOutput('Casting spell...\n', 'info');
             tokens = lexer.tokenize(code);
             // console.log("Tokens:", tokens); // Optional: log tokens for debugging
 
@@ -168,7 +168,7 @@ require(['vs/editor/editor.main'], function() {
 
             interpreter = new Interpreter(program, appendOutput, handleInput);
             interpreter.run();
-            appendOutput('Spell finished.', 'info');
+            appendOutput('\nSpell finished.', 'info');
 
         } catch (error) {
             console.error("SpellCast Error:", error);
