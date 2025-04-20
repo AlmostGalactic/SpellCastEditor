@@ -133,7 +133,7 @@ require(['vs/editor/editor.main'], function() {
 
     function appendOutput(message, type = 'log') {
         const span = document.createElement('span');
-        span.textContent = message + '\n';
+        span.textContent = message;
         if (type === 'error') {
             span.classList.add('output-error');
         } else if (type === 'info') {
